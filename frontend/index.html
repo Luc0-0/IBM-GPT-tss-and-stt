@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Voice Assistant</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container glass">
+      <h1>✨ AI Voice Assistant</h1>
+
+      <!-- Mode Toggle Switch -->
+      <div class="toggle">
+        <label class="switch" for="modeToggle">
+          <input
+            type="checkbox"
+            id="modeToggle"
+            role="switch"
+            aria-label="Toggle between IBM Speech Mode and Browser Speech Mode"
+            aria-describedby="modeLabel"
+          />
+          <span class="slider" aria-hidden="true"></span>
+        </label>
+        <span id="modeLabel">IBM Speech Mode</span>
+      </div>
+
+      <!-- API Keys -->
+      <div class="apikey">
+        <input
+          type="text"
+          id="ibmApiKey"
+          placeholder="IBM API Key (IBM Mode)"
+        />
+        <input type="text" id="gptApiKey" placeholder="OpenAI GPT API Key" />
+      </div>
+
+      <!-- Default Commands Dropdown -->
+      <div class="default-commands">
+        <label for="commandsSelect">Default Commands:</label>
+        <select id="commandsSelect">
+          <option value="">--Select a command--</option>
+          <option value="time">What’s the time?</option>
+          <option value="joke">Tell me a joke</option>
+          <option value="intro">Introduce yourself</option>
+          <option value="date">What’s today’s date?</option>
+        </select>
+      </div>
+
+      <!-- Voice Control Toggle -->
+      <div class="voice-control">
+        <label>
+          <input type="checkbox" id="voiceToggle" checked /> Enable Browser
+          Voice
+        </label>
+      </div>
+
+      <!-- Mic Button -->
+      <div class="controls">
+        <button id="micBtn">🎤 Start Talking</button>
+      </div>
+
+      <!-- Output -->
+      <div class="output">
+        <h2>Transcript (Live):</h2>
+        <p id="transcript">---</p>
+
+        <h2>Assistant Response:</h2>
+        <p id="gptResponse">---</p>
+
+        <h2>Audio Reply:</h2>
+        <audio id="responseAudio" controls></audio>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

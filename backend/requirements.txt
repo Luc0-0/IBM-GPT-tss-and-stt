@@ -1,0 +1,5 @@
+Flask
+flask-cors==4.0.0
+requests==2.32.0
+openai==1.31.0
+

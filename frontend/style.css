@@ -1,0 +1,106 @@
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 500px;
+  max-width: 95%;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.apikey input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.controls button {
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  border: none;
+  padding: 12px 20px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.controls button:hover {
+  transform: scale(1.05);
+}
+
+.output {
+  text-align: left;
+  margin-top: 25px;
+}
+
+#transcript,
+#gptResponse {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  border-radius: 10px;
+  min-height: 40px;
+}
+
+/* Toggle switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  margin-right: 10px;
+}
+.switch input {
+  display: none;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 24px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+input:checked + .slider {
+  background: #2196f3;
+}
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
